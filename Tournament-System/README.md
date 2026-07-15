@@ -241,21 +241,20 @@ erDiagram
 
 	PLAYERS {
 		int id PK
-		varchar name
-		varchar email UNIQUE
-		varchar country
+		string name
+		string email
+		string country
 	}
 
 	TOURNAMENTS {
 		int id PK
-		varchar name
+		string name
 		int max_players
 	}
 
 	REGISTRATIONS {
 		int tournament_id FK
 		int player_id FK
-		unique tournament_id_player_id
 	}
 
 	SCORES {
@@ -263,7 +262,6 @@ erDiagram
 		int tournament_id FK
 		int player_id FK
 		int score
-		unique tournament_id_player_id
 	}
 ```
 
