@@ -429,12 +429,12 @@ Add screenshots here before publishing the repository. Recommended assets:
 
 | Screen | Suggested File |
 |---|---|
-| Dashboard | `docs/screenshots/dashboard.png` |
-| Players | `docs/screenshots/players.png` |
-| Tournaments | `docs/screenshots/tournaments.png` |
-| Registration | `docs/screenshots/registration.png` |
-| Scores | `docs/screenshots/scores.png` |
-| Leaderboard | `docs/screenshots/leaderboard.png` |
+| Dashboard | `Tournament-System/docs/screenshots/dashboard.png` |
+| Players | `Tournament-System/docs/screenshots/players.png` |
+| Tournaments | `Tournament-System/docs/screenshots/tournaments.png` |
+| Registration | `Tournament-System/docs/screenshots/registration.png` |
+| Scores | `Tournament-System/docs/screenshots/scores.png` |
+| Leaderboard | `Tournament-System/docs/screenshots/leaderboard.png` |
 
 ## 18. Testing using Postman
 
