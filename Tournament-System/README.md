@@ -440,7 +440,7 @@ Add screenshots here before publishing the repository. Recommended assets:
 
 ## 18. Testing using Postman
 
-Postman was used to validate the REST API manually.
+Postman was used to validate the REST API and endpoint behavior manually before the frontend was tested.
 
 ### Suggested Test Flow
 
@@ -458,6 +458,7 @@ Postman was used to validate the REST API manually.
 - Verify success responses and error responses.
 - Test duplicate registration cases.
 - Test score updates for the same player and tournament.
+- Confirm backend responses in Postman first, then verify the corresponding UI flow in the frontend pages.
 
 ## 19. Problems Faced During Development
 
