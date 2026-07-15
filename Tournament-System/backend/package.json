@@ -1,0 +1,22 @@
+{
+  "name": "tournament-registration-system",
+  "version": "1.0.0",
+  "description": "Tournament Registration and Leaderboard System",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
+  },
+  "author": "Rithvik",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^4.21.0",
+    "express-validator": "^7.2.1",
+    "mysql2": "^3.14.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}

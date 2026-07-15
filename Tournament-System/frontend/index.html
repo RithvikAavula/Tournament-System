@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Tournament Registration System</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <!-- Header -->
+
+    <header class="header">
+
+        <div class="container">
+
+            <h1>Tournament Registration System</h1>
+
+            <p>
+                Internship Assignment using
+                Node.js, Express.js, MySQL & Vanilla JavaScript
+            </p>
+
+        </div>
+
+    </header>
+
+    <!-- Navigation -->
+
+    <nav class="navbar">
+
+        <ul>
+
+            <li>
+                <a href="index.html"
+                    class="active">
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="pages/players.html">
+                    Players
+                </a>
+            </li>
+
+            <li>
+                <a href="pages/tournaments.html">
+                    Tournaments
+                </a>
+            </li>
+
+            <li>
+                <a href="pages/register.html">
+                    Registration
+                </a>
+            </li>
+
+            <li>
+                <a href="pages/scores.html">
+                    Scores
+                </a>
+            </li>
+
+            <li>
+                <a href="pages/leaderboard.html">
+                    Leaderboard
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+    <!-- Dashboard -->
+
+    <main class="container">
+
+        <section class="hero">
+
+            <h2>
+                Welcome 👋
+            </h2>
+
+            <p>
+
+                This application allows players to register,
+                participate in tournaments,
+                submit scores,
+                and view live leaderboards.
+
+            </p>
+
+        </section>
+
+        <!-- Dashboard Cards -->
+
+        <section class="dashboard-grid">
+
+            <div class="card">
+
+                <h3>Total Players</h3>
+
+                <h1 id="totalPlayers">
+                    --
+                </h1>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Total Tournaments</h3>
+
+                <h1 id="totalTournaments">
+                    --
+                </h1>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Registrations</h3>
+
+                <h1>
+                    Available
+                </h1>
+
+                <a href="pages/register.html"
+                    class="btn">
+
+                    Register Player
+
+                </a>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Leaderboard</h3>
+
+                <h1>
+                    View Rankings
+                </h1>
+
+                <a href="pages/leaderboard.html"
+                    class="btn">
+
+                    Open
+
+                </a>
+
+            </div>
+
+        </section>
+
+        <!-- Features -->
+
+        <section class="features">
+
+            <h2>Project Features</h2>
+
+            <div class="feature-grid">
+
+                <div class="feature-card">
+
+                    <h3>👤 Player Management</h3>
+
+                    <p>
+
+                        Create, update,
+                        delete and manage
+                        tournament players.
+
+                    </p>
+
+                </div>
+
+                <div class="feature-card">
+
+                    <h3>🏆 Tournament Management</h3>
+
+                    <p>
+
+                        Create tournaments
+                        with player capacity.
+
+                    </p>
+
+                </div>
+
+                <div class="feature-card">
+
+                    <h3>📝 Registration</h3>
+
+                    <p>
+
+                        Register players
+                        into tournaments.
+
+                    </p>
+
+                </div>
+
+                <div class="feature-card">
+
+                    <h3>📊 Scores</h3>
+
+                    <p>
+
+                        Submit and update
+                        tournament scores.
+
+                    </p>
+
+                </div>
+
+                <div class="feature-card">
+
+                    <h3>🥇 Leaderboard</h3>
+
+                    <p>
+
+                        Dynamic ranking
+                        based on scores.
+
+                    </p>
+
+                </div>
+
+                <div class="feature-card">
+
+                    <h3>☁ TiDB Cloud</h3>
+
+                    <p>
+
+                        Cloud-hosted
+                        MySQL-compatible
+                        database.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+
+            © 2026 Tournament Registration System
+
+            <br>
+
+            Developed by Rithvik
+
+        </p>
+
+    </footer>
+
+    <script src="js/api.js"></script>
+
+    <script>
+
+        async function loadDashboard() {
+
+            try {
+
+                const players =
+                    await fetch(
+                        "http://localhost:5000/api/players"
+                    );
+
+                const playerData =
+                    await players.json();
+
+                document.getElementById(
+                    "totalPlayers"
+                ).textContent =
+                    playerData.data.length;
+
+                const tournaments =
+                    await fetch(
+                        "http://localhost:5000/api/tournaments"
+                    );
+
+                const tournamentData =
+                    await tournaments.json();
+
+                document.getElementById(
+                    "totalTournaments"
+                ).textContent =
+                    tournamentData.data.length;
+
+            }
+
+            catch (error) {
+
+                console.log(error);
+
+            }
+
+        }
+
+        loadDashboard();
+
+    </script>
+
+</body>
+
+</html>

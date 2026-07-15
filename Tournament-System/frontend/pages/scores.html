@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Scores</title>
+
+    <link rel="stylesheet"
+          href="../css/style.css">
+
+</head>
+
+<body>
+
+<header class="header">
+
+    <div class="container">
+
+        <h1>Tournament Registration System</h1>
+
+        <p>Submit Tournament Scores</p>
+
+    </div>
+
+</header>
+
+<nav class="navbar">
+
+    <ul>
+
+        <li><a href="../index.html">Dashboard</a></li>
+
+        <li><a href="players.html">Players</a></li>
+
+        <li><a href="tournaments.html">Tournaments</a></li>
+
+        <li><a href="register.html">Registration</a></li>
+
+        <li><a class="active"
+               href="scores.html">Scores</a></li>
+
+        <li><a href="leaderboard.html">Leaderboard</a></li>
+
+    </ul>
+
+</nav>
+
+<main class="container">
+
+    <div class="page-title">
+
+        <h2>Submit Score</h2>
+
+    </div>
+
+    <form id="scoreForm">
+
+        <div class="form-group">
+
+            <label for="tournamentSelect">Tournament</label>
+
+            <select id="tournamentSelect" required>
+
+                <option value="">Select Tournament</option>
+
+            </select>
+
+        </div>
+
+        <div class="form-group">
+
+            <label for="playerSelect">Player</label>
+
+            <select id="playerSelect" required>
+
+                <option value="">Select Player</option>
+
+            </select>
+
+        </div>
+
+        <div class="form-group">
+
+            <label for="score">Score</label>
+
+            <input
+                type="number"
+                id="score"
+                min="0"
+                required>
+
+        </div>
+
+        <button
+            class="btn"
+            type="submit">
+
+            Submit Score
+
+        </button>
+
+    </form>
+
+    <br>
+
+    <div id="scoreStatus"
+         class="status-card">
+
+        No score submitted yet.
+
+    </div>
+
+</main>
+
+<footer>
+
+<p>
+
+© 2026 Tournament Registration System
+
+</p>
+
+</footer>
+
+<script src="../js/api.js"></script>
+
+<script src="../js/scores.js"></script>
+
+</body>
+
+</html>
